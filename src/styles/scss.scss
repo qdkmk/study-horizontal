@@ -1,0 +1,68 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+li{
+  text-decoration: none;
+}
+.horizontal-list {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size:0;
+　　line-height:0;
+color: #fff;
+
+  .list {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    white-space: normal;
+
+    img {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 40vw;
+      object-fit: cover;
+    }
+
+    .left-bottom {
+      object-position: 0 100%;
+    }
+  }
+}
+
+.text {
+  width: 70%;
+  overflow-x: auto;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  text-align: left;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 0.2rem;
+}
+
+.sub {
+  font-size: 1rem;
+  line-height: 0.01rem;
+}
+.description{
+  width: 100%;
+  display: none;
+  font-size: 1rem;
+  line-height: 1rem;
+}
