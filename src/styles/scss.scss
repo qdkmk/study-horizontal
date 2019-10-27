@@ -3,15 +3,17 @@ html {
 }
 
 body {
-  height: 100vh;
   margin: 0;
   padding: 0;
+  height: 100vh;
+}
+ul{
+  height: 100%;
 }
 li{
   text-decoration: none;
 }
 .horizontal-list {
-  height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: auto;
@@ -21,7 +23,7 @@ li{
 color: #fff;
 
   .list {
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -44,16 +46,18 @@ color: #fff;
 
 .text {
   width: 70%;
-  overflow-x: auto;
+
   position: absolute;
   bottom: 10%;
   left: 10%;
   text-align: left;
+  transition: all 1s;
 }
 
 .title {
   font-size: 3rem;
   line-height: 0.2rem;
+  transition: all 1s;
 }
 
 .sub {
@@ -62,7 +66,18 @@ color: #fff;
 }
 .description{
   width: 100%;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
   font-size: 1rem;
   line-height: 1rem;
+  transition: all 2s;
+  p{
+    margin: 0;
+  }
 }
+
+.block:hover .description{
+    max-height: 300px;
+    opacity: 1;
+  }

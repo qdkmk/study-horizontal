@@ -7,15 +7,13 @@ window.onload=()=>{
   item = document.getElementById('horizontal-list');  
 }
 window.addEventListener('wheel', function(e) {
-  if (e.deltaY > 0) item.scrollLeft += 20;
-  else item.scrollLeft -= 20;
-});
-
-$(function(){
-  $(".block").mouseenter(function(){
-    $("div > div:not(:animated)",this).show(1000);
-  });
-  $(".block").mouseleave(function(){
-    $("div > div:not(:animated)",this).hide(1000);
-  })
+  if(e.deltaX == 0){
+    if (e.deltaY > 0) {
+      //item.scrollLeft += 20;
+      $("body").css("transition","1000mx 'cubic-bezier(0.23, 1, 0.32, 1)'")
+      $("body").css("transform","translateX(-20px)")
+      
+    }
+    else if(e.deltaY < 0) item.scrollLeft -= 20;
+  }
 });
