@@ -18,15 +18,24 @@ wheelのイベント発火でy軸のスクロールを元にbodyをtranslateす�
 githubのcommitは2017.1が最後。2018.12にqiitaでレガシーとしながらも、不具合解消記事あり。
 わざわざ選ぶものではなさそう。
 
-horizontal　scrollにはwhite-space method と flexbox methodの２つがあるとして（gridも）大雑把に説明したサイト。
+horizontal　scrollにはwhite-space method と flexbox methodの２つがあるとして（gridも）説明したサイト。iosのスクロールに関する内容は知らなかった。
 https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6
 
 ## Answer
-・jqueryでの実装。
+### 4パターン考えられる
 
-・iscroll.jsによるレガシー技術対応。
-・
-pcにwheelにはjsで対応（このリポジトリの最初のver/cssも上記white-space or flexbox method）。カクつきはあるけれどdurationと計算で慣性を演出すれば問題なし。
+#### jqueryでの実装。
 
-・最終リポジトリにflick入力の検知を追加（ライブラリありそう）
+そんなに手がかからないが、わざわざ選ぶだろうか？
 
+#### iscroll.jsによるレガシー技術対応。
+
+更新されていないライブラリをわざわざ選ぶだろうか？
+
+#### pcにwheelにはjsで対応（このリポジトリの最初のver/cssも上記white-space or flexbox methodなのでsp問題なし）。カクつきはあるけれどdurationと計算で慣性を演出すれば問題なし。
+
+これが現実的な気がする。
+
+#### 最終リポジトリ(bodyにfixスタイル、wheelで発火しtranslateで移動)にflick入力の検知（ライブラリありそう）を追加。
+
+このやり方は想定したデバイス環境では完璧だが、無理やり感もある。判断がつかないが、色々の環境テストができないという点かららとるべきではないor同様のことを行っているライブラリを探して導入するのが良いと思う。ありそう。
